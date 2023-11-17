@@ -63,6 +63,8 @@
     "prettier-eslint": "^16.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^6.19.0",
     "standard": "^17.1.0",
     "typescript": "^5.2.2",
     "webpack-merge": "^5.10.0"
