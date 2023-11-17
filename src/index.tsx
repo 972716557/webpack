@@ -1,20 +1,20 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Interview from "./interview";
-import Home from "./home";
+// import Home from "./home";
 
 function App() {
   return (
     <div>
-      <div className="row">
+      {/* <div className="row">
         <NavLink to="/">home</NavLink>
         <NavLink to="/interview">interview</NavLink>
-      </div>
+      </div> */}
       <div className="row">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Interview />} />
           <Route path="/interview" element={<Interview />} />
         </Routes>
       </div>
