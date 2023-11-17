@@ -42,6 +42,8 @@
   },
   "homepage": "https://github.com/972716557/webpack#readme",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
     "autoprefixer": "^10.4.16",
     "clean-webpack-plugin": "^4.0.0",
     "css-minimizer-webpack-plugin": "^5.0.1",
@@ -54,6 +56,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-standard": "^5.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "lodash": "^4.17.21",
     "postcss-loader": "^7.3.3",
     "prettier": "^3.1.0",
@@ -61,6 +64,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "standard": "^17.1.0",
+    "typescript": "^5.2.2",
     "webpack-merge": "^5.10.0"
   }
 }
