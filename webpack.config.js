@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "development",
   entry: {
     index: "./src/index.js",
     print: "./src/print.js",
@@ -11,12 +12,19 @@ module.exports = {
       title: "管理输出",
     }),
   ],
+  devServer: {
+    static: "./dist", // 告诉webpack-dev-server从哪个文件开始查找
+  },
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+    publicPath: "/",
   },
-
+  devtool: "inline-source-map",
+  optimization: {
+    runtimeChunk: "single",
+  },
   module: {
     rules: [
       {
