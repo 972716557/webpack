@@ -13,7 +13,7 @@ const PurgecssWebpackPlugin = require('purgecss-webpack-plugin');
 // 基础配置
 const baseConfig = {
 	// 入口文件
-	entry: resolvePath('../src/index.tsx'),
+	entry: resolvePath('../src/main.js'),
 	// 出口文件
 	output: {
 		path: resolvePath('../dist'),
@@ -68,6 +68,14 @@ const baseConfig = {
 			{
 				test: /format\.js$/,
 				loader: './loader/remove-console.js'
+			},
+			// 可追加属性的loader
+			{
+				test: /format\.js$/,
+				loader: './loader/prefix/index.js',
+				options: {
+					author: 'yuchen'
+				}
 			}
 		]
 	},
