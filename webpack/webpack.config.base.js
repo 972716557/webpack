@@ -63,6 +63,11 @@ const baseConfig = {
 			{
 				test: /format\.js$/,
 				loader: './loader/index.js'
+			},
+			// 移除console.log loader
+			{
+				test: /format\.js$/,
+				loader: './loader/remove-console.js'
 			}
 		]
 	},
