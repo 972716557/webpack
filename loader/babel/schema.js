@@ -1,10 +1,11 @@
 const options = {
 	type: 'object',
 	properties: {
-		author: {
-			type: 'string'
+		presets: {
+			type: 'array'
 		}
 	},
-	additionProperties: false
+	additionProperties: true
 };
+
 module.exports = options;

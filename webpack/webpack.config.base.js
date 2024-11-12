@@ -76,6 +76,13 @@ const baseConfig = {
 				options: {
 					author: 'yuchen'
 				}
+			},
+			{
+				test: /format\.js$/,
+				loader: './loader/babel/index.js',
+				options: {
+					presets: ['@babel/preset-env']
+				}
 			}
 		]
 	},
