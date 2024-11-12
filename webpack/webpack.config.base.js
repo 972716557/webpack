@@ -58,6 +58,11 @@ const baseConfig = {
 			{
 				test: /\.(svg|png|jpg|gif)$/,
 				type: 'asset/resource'
+			},
+			// 自定义loader
+			{
+				test: /format\.js$/,
+				loader: './loader/index.js'
 			}
 		]
 	},
