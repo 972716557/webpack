@@ -17,7 +17,8 @@ const baseConfig = {
 	// 出口文件
 	output: {
 		path: resolvePath('../dist'),
-		filename: '[name].bundle.js'
+		filename: '[name].bundle.js',
+		clean: true
 	},
 	resolve: {
 		// 在导入语句没带文件后缀时，Webpack 会自动带上后缀后去尝试访问文件是否存在。  resolve.extensions用于配置在尝试过程中用到的后缀列表，默认是：js 和 json
@@ -57,6 +58,9 @@ const baseConfig = {
 			// 对图片的处理
 			{
 				test: /\.(svg|png|jpg|gif)$/,
+				// loader: './loader/file/index.js',
+				// // 配置了这个就表示不会使用webpack默认的打包工具，而是使用我们自定义的打包loader，不然webpack会默认对非.js等文件进行默认编译
+				// type: 'javascript/auto'
 				type: 'asset/resource'
 			},
 			// 自定义loader

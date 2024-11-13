@@ -1,4 +1,5 @@
 import format from './utils/format';
+import './index.css';
 format();
 console.log(111);
 const sum = (data) => {
