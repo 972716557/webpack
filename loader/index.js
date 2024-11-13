@@ -1,6 +1,6 @@
 // 同步loader
 module.exports = function loader(content) {
-	console.log(content, 'content');
+	console.log(content, 'loader');
 	return content;
 };
 

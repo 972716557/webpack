@@ -10,6 +10,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // 会单独提取 CSS 并清除用不到的 CSS
 const PurgecssWebpackPlugin = require('purgecss-webpack-plugin');
 
+const TestPlugin = require('../plugins/test-plugin');
+
 // 基础配置
 const baseConfig = {
 	// 入口文件
@@ -102,7 +104,8 @@ const baseConfig = {
 		}),
 		new MiniCssExtractPlugin({
 			filename: `[name].[hash:8].css`
-		})
+		}),
+		new TestPlugin()
 		// new PurgecssWebpackPlugin({
 		// 	paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
 		// })
