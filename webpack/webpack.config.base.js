@@ -12,6 +12,8 @@ const PurgecssWebpackPlugin = require('purgecss-webpack-plugin');
 
 const TestPlugin = require('../plugins/test-plugin');
 
+const Banner = require('../plugins/banner-plugin');
+
 // 基础配置
 const baseConfig = {
 	// 入口文件
@@ -105,7 +107,8 @@ const baseConfig = {
 		new MiniCssExtractPlugin({
 			filename: `[name].[hash:8].css`
 		}),
-		new TestPlugin()
+		new TestPlugin(),
+		new Banner()
 		// new PurgecssWebpackPlugin({
 		// 	paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
 		// })
