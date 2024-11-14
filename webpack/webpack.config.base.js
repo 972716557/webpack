@@ -14,6 +14,8 @@ const TestPlugin = require('../plugins/test-plugin');
 
 const Banner = require('../plugins/banner-plugin');
 
+const Clean = require('../plugins/clean-plugin');
+
 // 基础配置
 const baseConfig = {
 	// 入口文件
@@ -21,8 +23,8 @@ const baseConfig = {
 	// 出口文件
 	output: {
 		path: resolvePath('../dist'),
-		filename: '[name].bundle.js',
-		clean: true
+		filename: '[name].bundle.js'
+		// clean: true
 	},
 	resolve: {
 		// 在导入语句没带文件后缀时，Webpack 会自动带上后缀后去尝试访问文件是否存在。  resolve.extensions用于配置在尝试过程中用到的后缀列表，默认是：js 和 json
@@ -108,6 +110,7 @@ const baseConfig = {
 			filename: `[name].[hash:8].css`
 		}),
 		new TestPlugin(),
+		// new Clean(),
 		new Banner()
 		// new PurgecssWebpackPlugin({
 		// 	paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
