@@ -16,6 +16,8 @@ const Banner = require('../plugins/banner-plugin');
 
 const Clean = require('../plugins/clean-plugin');
 
+const Analyze = require('../plugins/analyze-plugin');
+
 // 基础配置
 const baseConfig = {
 	// 入口文件
@@ -110,7 +112,8 @@ const baseConfig = {
 			filename: `[name].[hash:8].css`
 		}),
 		new TestPlugin(),
-		// new Clean(),
+		new Clean(),
+		new Analyze(),
 		new Banner()
 		// new PurgecssWebpackPlugin({
 		// 	paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
