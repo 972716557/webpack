@@ -29,7 +29,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./webpack/webpack.config.dev.js",
     "serve": "webpack-dev-server --config ./webpack/webpack.config.dev.js",
-    "debug":"node --inspect-brk ./node_modules/webpack-cli/bin/cli.js"
+    "debug": "node --inspect-brk ./node_modules/webpack-cli/bin/cli.js"
   },
   "repository": {
     "type": "git",
@@ -69,6 +69,7 @@
     "react-dom": "^18.2.0",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^6.19.0",
+    "safe-require": "^1.0.4",
     "standard": "^17.1.0",
     "typescript": "^5.2.2",
     "webpack-merge": "^5.10.0"
