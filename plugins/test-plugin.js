@@ -1,8 +1,4 @@
 class TestPlugin {
-	constructor() {
-		console.log(11);
-	}
-
 	apply(compiler) {
 		compiler.hooks.make.tapAsync('TestPlugin', (compilation, callback) => {
 			setTimeout(() => {

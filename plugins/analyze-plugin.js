@@ -1,4 +1,8 @@
 class Analyze {
+	constructor() {
+		console.log('plugin start');
+	}
+
 	apply(compiler) {
 		compiler.hooks.emit.tap('Analyze', (compilation) => {
 			// 遍历所有即将输出的文件得到大小
